@@ -1,8 +1,8 @@
-
-
 # e-commerce Clothing App
+
 A shopping application that is built using React and Redux.
 
+#[LIVE DEMO](https://flamboyant-leakey-037ad5.netlify.app/)
 
 ## Scrips to run project
 
@@ -11,11 +11,11 @@ A shopping application that is built using React and Redux.
     yarn install
     or
     npm install
-    
+
 ### You can then run the project locally(development) using either Yarn or NPM.
 
     yarn start
     or
     npm start
-Project will open in [localhost:3000](http://localhost:3000/) automatically or you can manually goto [localhost:3000](http://localhost:3000/)
 
+Project will open in [localhost:3000](http://localhost:3000/) automatically or you can manually goto [localhost:3000](http://localhost:3000/)
