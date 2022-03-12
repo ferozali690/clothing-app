@@ -13,3 +13,22 @@ export const removeDuplicates = (cartArray, cartItemToAdd) => {
   }
   return [...cartArray, { ...cartItemToAdd, quantity: 1 }];
 };
+
+export const decreaseQuantity = (cartArray, cartItemToDecrease) => {
+  const checkForItemPresentInCart = cartArray.find(
+    (item) => item.id === cartItemToDecrease.id
+  );
+  if (checkForItemPresentInCart.quantity === 1) {
+    return cartArray.filter((item) => item.id !== cartItemToDecrease.id);
+  }
+  return cartArray.map((item) => {
+    if (item.id === cartItemToDecrease.id) {
+      return {
+        ...item,
+        quantity: item.quantity - 1,
+      };
+    } else {
+      return item;
+    }
+  });
+};

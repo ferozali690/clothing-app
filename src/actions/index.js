@@ -2,6 +2,7 @@ import {
   toggleCartIcon,
   addToCartIcon,
   deleteCheckoutItem,
+  decreaseQuantityChkout,
 } from "../constants";
 export const toggleCartIconAction = () => {
   return {
@@ -17,6 +18,12 @@ export const addToCartAction = (item) => {
 export const deleteCheckoutItemAction = (item) => {
   return {
     type: deleteCheckoutItem,
+    payload: item,
+  };
+};
+export const decreaseQuantityInCheckoutPage = (item) => {
+  return {
+    type: decreaseQuantityChkout,
     payload: item,
   };
 };

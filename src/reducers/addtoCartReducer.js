@@ -1,5 +1,9 @@
-import { addToCartIcon, deleteCheckoutItem } from "../constants";
-import { removeDuplicates } from "../utils";
+import {
+  addToCartIcon,
+  decreaseQuantityChkout,
+  deleteCheckoutItem,
+} from "../constants";
+import { removeDuplicates, decreaseQuantity } from "../utils";
 
 const initialState = {
   addCartData: [],
@@ -17,6 +21,11 @@ const addToCartReducer = (state = initialState, action) => {
         addCartData: [
           ...state.addCartData.filter((item) => item.id !== action.payload),
         ],
+      };
+    case decreaseQuantityChkout:
+      return {
+        ...state,
+        addCartData: decreaseQuantity(state.addCartData, action.payload),
       };
     default:
       return { ...state };
