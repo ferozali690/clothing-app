@@ -2,7 +2,7 @@
 
 A shopping application that is built using React and Redux.
 
-##[Live Demo](https://flamboyant-leakey-037ad5.netlify.app/)
+## [Live Demo](https://flamboyant-leakey-037ad5.netlify.app/)
 
 ## Scrips to run project
 
