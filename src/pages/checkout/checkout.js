@@ -4,7 +4,6 @@ import CheckoutItem from "../../components/checkoutItem/checkoutItem";
 import "./checkout.scss";
 
 const Checkout = ({ match }) => {
-  console.log("mm", match);
   const getAddToCartData = useSelector(
     (state) => state.addToCartState.addCartData
   );

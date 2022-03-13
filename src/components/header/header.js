@@ -10,9 +10,7 @@ import { toggleCartIconAction } from "../../actions";
 const Header = () => {
   const dispatch = useDispatch();
   const getToggleCartIconState = useSelector((state) => state.cartIcon.hidden);
-  console.log("toggelcarticon", getToggleCartIconState);
   const handleToggleCartIcon = () => {
-    console.log("i clicked");
     dispatch(toggleCartIconAction());
   };
   return (

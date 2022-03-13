@@ -10,7 +10,6 @@ const CartIcon = ({ onClick }) => {
   const getCartItemsCount = getAddToCartData.reduce((total, item) => {
     return total + item.quantity;
   }, 0);
-  console.log(getCartItemsCount);
   return (
     <div className="cart-icon" onClick={onClick}>
       <ShoppingIcon className="shopping-icon" />
