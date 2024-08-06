@@ -1,6 +1,6 @@
 import React from "react";
-import CollectionPreview from "../previewCollection/preview-collection";
-import SHOP_DATA from "../../pages/shop/shopData";
+import CollectionPreview from "../previewCollection/preview-collection.js";
+import SHOP_DATA from "../../pages/shop/shopData.js";
 import { useState } from "react";
 
 const CollectionOverView = () => {

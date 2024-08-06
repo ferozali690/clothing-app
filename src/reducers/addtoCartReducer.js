@@ -2,8 +2,8 @@ import {
   addToCartIcon,
   decreaseQuantityChkout,
   deleteCheckoutItem,
-} from "../constants";
-import { removeDuplicates, decreaseQuantity } from "../utils";
+} from "../constants/index.js";
+import { removeDuplicates, decreaseQuantity } from "../utils/index.js";
 
 const initialState = {
   addCartData: [],

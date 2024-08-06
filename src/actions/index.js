@@ -3,7 +3,7 @@ import {
   addToCartIcon,
   deleteCheckoutItem,
   decreaseQuantityChkout,
-} from "../constants";
+} from "../constants/index.js";
 export const toggleCartIconAction = () => {
   return {
     type: toggleCartIcon,

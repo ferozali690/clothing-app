@@ -1,4 +1,4 @@
-import {throttling} from 'lighthouse/core/config/constants'
+import {throttling} from 'lighthouse/core/config/constants.js'
 
 const NETWORK_PRESET_OFFLINE=false;
 

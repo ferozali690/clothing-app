@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CollectionItem from "../../components/collection/collection-item";
-import SHOP_DATA from "../shop/shopData";
+import CollectionItem from "../../components/collection/collection-item.js";
+import SHOP_DATA from "../shop/shopData.js";
 import "./category.scss";
 const CollectionPage = ({ match }) => {
   const [shopDataState] = useState(SHOP_DATA);

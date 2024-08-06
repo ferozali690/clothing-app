@@ -2,10 +2,10 @@ import React from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
-import CartIcon from "../cartIcon/cartIcon";
+import CartIcon from "../cartIcon/cartIcon.js";
 import { useDispatch, useSelector } from "react-redux";
-import CartDropdown from "../cartDropdown/cartDropdown";
-import { toggleCartIconAction } from "../../actions";
+import CartDropdown from "../cartDropdown/cartDropdown.js";
+import { toggleCartIconAction } from "../../actions/index.js";
 
 const Header = () => {
   const dispatch = useDispatch();

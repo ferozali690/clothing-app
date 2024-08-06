@@ -9,8 +9,8 @@ import{
     LIGHTHOUSE_DESKTOP_DENSE_4G_CONFIG,
 } from './constants'
 import { checkWebVitals } from './webVitalsUtils.js';
-import lighthouseDesktopConfig from 'lighthouse/core/config/lr-desktop-config';
-import lighthouseMobileConfig from  'lighthouse/core/config/lr-mobile-config';
+import lighthouseDesktopConfig from 'lighthouse/core/config/lr-desktop-config.js';
+import lighthouseMobileConfig from  'lighthouse/core/config/lr-mobile-config.js';
 
 const HOME_PAGE_URL = 'http://localhost:3000/';
 

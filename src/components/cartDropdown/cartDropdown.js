@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { toggleCartIconAction } from "../../actions";
-import CartItem from "../cartItem/cartItem";
-import CustomButton from "../custom-button/customButton";
+import { toggleCartIconAction } from "../../actions/index.js";
+import CartItem from "../cartItem/cartItem.js";
+import CustomButton from "../custom-button/customButton.js";
 import "./cartDropdown.scss";
 const CartDropdown = ({ history }) => {
   const dispatch = useDispatch();

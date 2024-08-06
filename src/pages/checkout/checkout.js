@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import CheckoutItem from "../../components/checkoutItem/checkoutItem";
+import CheckoutItem from "../../components/checkoutItem/checkoutItem.js";
 import "./checkout.scss";
 
 const Checkout = ({ match }) => {

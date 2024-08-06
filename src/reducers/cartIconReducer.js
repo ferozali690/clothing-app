@@ -1,4 +1,4 @@
-import { toggleCartIcon } from "../constants";
+import { toggleCartIcon } from "../constants/index.js";
 const intialState = {
   hidden: true,
 };

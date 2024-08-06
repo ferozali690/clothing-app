@@ -4,7 +4,7 @@ import {
   deleteCheckoutItemAction,
   addToCartAction,
   decreaseQuantityInCheckoutPage,
-} from "../../actions";
+} from "../../actions/index.js";
 import "./checkoutItem.scss";
 const CheckoutItem = ({ checkout }) => {
   const dispatch = useDispatch();

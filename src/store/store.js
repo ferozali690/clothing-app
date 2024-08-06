@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import addToCartReducer from "../reducers/addtoCartReducer";
-import CartIconReducer from "../reducers/cartIconReducer";
+import addToCartReducer from "../reducers/addtoCartReducer.js";
+import CartIconReducer from "../reducers/cartIconReducer.js";
 
 const allReducers = combineReducers({
   cartIcon: CartIconReducer,
