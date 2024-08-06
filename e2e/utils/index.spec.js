@@ -7,7 +7,7 @@ import{
     LIGHTHOUSE_MOBILE_SLOW_4G_CONFIG,
     LIGHTHOUSE_MOBILE_REGULAR_3G_CONFIG,
     LIGHTHOUSE_DESKTOP_DENSE_4G_CONFIG,
-} from './constants'
+} from './constants.js'
 import { checkWebVitals } from './webVitalsUtils.js';
 import lighthouseDesktopConfig from 'lighthouse/core/config/lr-desktop-config.js';
 import lighthouseMobileConfig from  'lighthouse/core/config/lr-mobile-config.js';
@@ -17,7 +17,7 @@ const HOME_PAGE_URL = 'http://localhost:3000/';
 
 
 test.describe('Lighthouse Performance Checks',()=>{
-test('Performnace metrics for Slow 3g network',async({playwright,browserName})=>{
+test('Performance metrics for Slow 3g network',async({playwright,browserName})=>{
     test.skip(browserName !== 'chromium','Running only on chrome');
     const browser=await playwright.chromium.launch({
         args:['--remote-debugging-port=9223'],
@@ -36,14 +36,12 @@ test('Performnace metrics for Slow 3g network',async({playwright,browserName})=>
         reportName: 'lh-report-slow-3g-desktop',
     });
 });
-test('Performnace metrics for Regular 3g network',async({playwright,browserName})=>{
+test('Performance metrics for Regular 3g network',async({playwright,browserName})=>{
     test.skip(browserName !== 'chromium','Running only on chrome');
     const browser=await playwright.chromium.launch({
         args:['--remote-debugging-port=9223'],
     });
-    const context=await browser.newContext();
-
-    const page=await context.newPage();
+    const page = await browser.newPage();
 
     await page.goto(HOME_PAGE_URL,{waitUntil:'networkidle'});
 
@@ -55,14 +53,12 @@ test('Performnace metrics for Regular 3g network',async({playwright,browserName}
         reportName: 'lh-report-Regular-3g-desktop',
     });
 });
-test('Performnace metrics for Regular 4g network',async({playwright,browserName})=>{
+test('Performance metrics for Regular 4g network',async({playwright,browserName})=>{
     test.skip(browserName !== 'chromium','Running only on chrome');
     const browser=await playwright.chromium.launch({
         args:['--remote-debugging-port=9223'],
     });
-    const context=await browser.newContext();
-
-    const page=await context.newPage();
+    const page = await browser.newPage();
 
     await page.goto(HOME_PAGE_URL,{waitUntil:'networkidle'});
 
@@ -74,14 +70,12 @@ test('Performnace metrics for Regular 4g network',async({playwright,browserName}
         reportName: 'lh-report-Regular-4g-desktop',
     });
 });
-test('Performnace metrics for Dense 4g network',async({playwright,browserName})=>{
+test('Performance metrics for Dense 4g network',async({playwright,browserName})=>{
     test.skip(browserName !== 'chromium','Running only on chrome');
     const browser=await playwright.chromium.launch({
         args:['--remote-debugging-port=9223'],
     });
-    const context=await browser.newContext();
-
-    const page=await context.newPage();
+    const page = await browser.newPage();
 
     await page.goto(HOME_PAGE_URL,{waitUntil:'networkidle'});
 
@@ -93,14 +87,29 @@ test('Performnace metrics for Dense 4g network',async({playwright,browserName})=
         reportName: 'lh-report-dense-4g-desktop',
     });
 });
-test('Performnace metrics for Mobile Regular 3g network',async({playwright,browserName})=>{
+test('Performance metrics for Fast 3g network',async({playwright,browserName})=>{
     test.skip(browserName !== 'chromium','Running only on chrome');
     const browser=await playwright.chromium.launch({
         args:['--remote-debugging-port=9223'],
     });
-    const context=await browser.newContext();
+    const page = await browser.newPage();
 
-    const page=await context.newPage();
+    await page.goto(HOME_PAGE_URL,{waitUntil:'networkidle'});
+
+    await checkWebVitals({
+        lighthouseConfig:lighthouseDesktopConfig,
+        lightHouseNetworkOpts:FAST_3G_CONFIG,
+        portNumber:9223,
+        page:page,
+        reportName: 'lh-report-Fast-3g-desktop',
+    });
+});
+test('Performance metrics for Mobile Regular 3g network',async({playwright,browserName})=>{
+    test.skip(browserName !== 'chromium','Running only on chrome');
+    const browser=await playwright.chromium.launch({
+        args:['--remote-debugging-port=9223'],
+    });
+    const page = await browser.newPage();
 
     await page.goto(HOME_PAGE_URL,{waitUntil:'networkidle'});
 
@@ -112,14 +121,12 @@ test('Performnace metrics for Mobile Regular 3g network',async({playwright,brows
         reportName: 'lh-report-regular-3g-mobile',
     });
 });
-test('Performnace metrics for Mobile Slow 4g network',async({playwright,browserName})=>{
+test('Performance metrics for Mobile Slow 4g network',async({playwright,browserName})=>{
     test.skip(browserName !== 'chromium','Running only on chrome');
     const browser=await playwright.chromium.launch({
         args:['--remote-debugging-port=9223'],
     });
-    const context=await browser.newContext();
-
-    const page=await context.newPage();
+    const page = await browser.newPage();
 
     await page.goto(HOME_PAGE_URL,{waitUntil:'networkidle'});
 

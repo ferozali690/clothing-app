@@ -12,6 +12,8 @@ const SLOW_3G_CONFIG ={
         uploadThroughput:((500 * 1000) / 8) *0.8,
         latency: 400 * 5,
     },
+    
+
 }
 
 const FAST_3G_CONFIG ={
@@ -22,6 +24,7 @@ const FAST_3G_CONFIG ={
         uploadThroughput:((750 * 1024) / 8) *0.9,
         latency: 150 * 3.75,
     },
+    
 }
 
 const REGULAR_3G_CONFIG ={
@@ -32,6 +35,8 @@ const REGULAR_3G_CONFIG ={
         uploadThroughput:((250 * 1024) / 8),
         latency:100,
     },
+    
+
 }
 
 const REGULAR_4G_CONFIG ={
@@ -42,6 +47,8 @@ const REGULAR_4G_CONFIG ={
         uploadThroughput:((6 * 1024 * 1024) / 8),
         latency:50,
     },
+    
+
 }
 
 const LIGHTHOUSE_MOBILE_SLOW_4G_CONFIG ={
@@ -68,8 +75,6 @@ const TIME_TO_INTERACTIVE_THRESHOLD = 5000;
 
 const SPEED_INDEX_THRESHOLD = 3400;
 
-const FIRST_INPUT_DELAY_THRESHOLD = 100;
-
 const CUMULATIVE_SHIFT_THRESHOLD = 100;
 
 export{
@@ -84,6 +89,5 @@ export{
     LARGEST_CONTENTFUL_PAINT_THRESHOLD,
     TIME_TO_INTERACTIVE_THRESHOLD,
     SPEED_INDEX_THRESHOLD,
-    FIRST_INPUT_DELAY_THRESHOLD,
     CUMULATIVE_SHIFT_THRESHOLD
 }
